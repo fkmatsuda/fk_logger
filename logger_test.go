@@ -109,7 +109,7 @@ func TestRolling(t *testing.T) {
 	dir := filepath.Dir(fileName)
 	file := filepath.Base(fileName)
 
-	rollingFile := fmt.Sprintf("%s%s%s.1.gz", dir, os.PathSeparator, file)
+	rollingFile := fmt.Sprintf("%s%s%s.1.gz", dir, string(os.PathSeparator), file)
 
 	_, err := os.Stat(rollingFile)
 
@@ -126,7 +126,7 @@ func TestNoRolling(t *testing.T) {
 	dir := filepath.Dir(fileName)
 	file := filepath.Base(fileName)
 
-	rollingFile := fmt.Sprintf("%s%s%s.1.gz", dir, os.PathSeparator, file)
+	rollingFile := fmt.Sprintf("%s%s%s.1.gz", dir, string(os.PathSeparator), file)
 
 	_, err := os.Stat(rollingFile)
 

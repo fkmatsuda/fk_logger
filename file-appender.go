@@ -14,7 +14,7 @@ type fileAppenderWriter struct {
 }
 
 func (w fileAppenderWriter) fullFilePath() string {
-	return fmt.Sprintf("%s%s%s", w.dir, os.PathSeparator, w.file)
+	return fmt.Sprintf("%s%s%s", w.dir, string(os.PathSeparator), w.file)
 }
 
 func (w fileAppenderWriter) fileRotate() error {
