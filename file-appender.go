@@ -5,8 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	fkfile "gitlab.com/fkmatsuda.dev/go/fk_file"
-	fksystem "gitlab.com/fkmatsuda.dev/go/fk_system"
+	fkfile "github.com/fkmatsuda/fk_file"
 )
 
 type fileAppenderWriter struct {
@@ -15,7 +14,7 @@ type fileAppenderWriter struct {
 }
 
 func (w fileAppenderWriter) fullFilePath() string {
-	return fmt.Sprintf("%s%s%s", w.dir, fksystem.DirSeparator(), w.file)
+	return fmt.Sprintf("%s%s%s", w.dir, os.PathSeparator, w.file)
 }
 
 func (w fileAppenderWriter) fileRotate() error {
@@ -73,7 +72,7 @@ func (w fileAppenderWriter) moveLogFileToNext(idx int) error {
 func (w fileAppenderWriter) Write(p []byte) (n int, err error) {
 
 	n = 0
-	err = fksystem.EnsureDir(w.dir)
+	err = fkfile.EnsureDir(w.dir)
 	if err != nil {
 		return
 	}

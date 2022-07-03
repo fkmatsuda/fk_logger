@@ -10,8 +10,7 @@ import (
 	"regexp"
 	"testing"
 
-	fkfile "gitlab.com/fkmatsuda.dev/go/fk_file"
-	fksystem "gitlab.com/fkmatsuda.dev/go/fk_system"
+	fkfile "github.com/fkmatsuda/fk_file"
 )
 
 var (
@@ -110,7 +109,7 @@ func TestRolling(t *testing.T) {
 	dir := filepath.Dir(fileName)
 	file := filepath.Base(fileName)
 
-	rollingFile := fmt.Sprintf("%s%s%s.1.gz", dir, fksystem.DirSeparator(), file)
+	rollingFile := fmt.Sprintf("%s%s%s.1.gz", dir, os.PathSeparator, file)
 
 	_, err := os.Stat(rollingFile)
 
@@ -127,7 +126,7 @@ func TestNoRolling(t *testing.T) {
 	dir := filepath.Dir(fileName)
 	file := filepath.Base(fileName)
 
-	rollingFile := fmt.Sprintf("%s%s%s.1.gz", dir, fksystem.DirSeparator(), file)
+	rollingFile := fmt.Sprintf("%s%s%s.1.gz", dir, os.PathSeparator, file)
 
 	_, err := os.Stat(rollingFile)
 
