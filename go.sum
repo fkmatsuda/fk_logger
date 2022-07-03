@@ -1,4 +1,2 @@
-gitlab.com/fkmatsuda.dev/go/fk_file v1.0.0 h1:bu5C7899rjfkKzah7QdLQ5y6TVsUXUDK921LyGWvwPY=
-gitlab.com/fkmatsuda.dev/go/fk_file v1.0.0/go.mod h1:pOnTU6uaghdsp3IDEr0eHEXVpm5oCWqNnCGgqfx58wc=
-gitlab.com/fkmatsuda.dev/go/fk_system v1.0.0 h1:97LQqnNRyMJ+35+p+4hnixxrdhkJ6BL6A3FwzMcF41w=
-gitlab.com/fkmatsuda.dev/go/fk_system v1.0.0/go.mod h1:Tt/E1aQFAZRZi87NMcALV5R9jDseZyZdPmZr+emwU5s=
+github.com/fkmatsuda/fk_file v1.0.0 h1:NCvmdlff4kAV8A+U4BTQwdU5VQzPWUW2ABZ30f/+2+o=
+github.com/fkmatsuda/fk_file v1.0.0/go.mod h1:t3/iXp8ozQ6+3LJhnHD3B3j9639xXQFdY0u+lQ93zo4=
